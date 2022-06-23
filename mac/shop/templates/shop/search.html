@@ -95,7 +95,7 @@ padding-right: 0;
 {% endblock %}
 {% block js %}
 <script>
-    {% if msg | length != 0 %}
+    {% if msg|length != 0 %}
     alert('{{msg}}');
     window.location.href = "/"
     {% endif %}

@@ -80,16 +80,17 @@
             mystr = `<li class="list-group-item d-flex justify-content-between align-items-center">
                     ${name}
                     <span class="badge badge-primary badge-pill">${qty}</span>
-                </li>
-                <nav aria-label="breadcrumb">
-                <ol class="breadcrumb mt-3">
-                    <li class="breadcrumb-item active" aria-current="page">Your Cart Total is <b>₹ <span
-                                id="totalPrice"></b>
-                        </span>. Enter your details below and place your order. Thanks for using My Awesome Cart!</li>
-                </ol>
-            </nav>`
+                </li>`
             $('#items').append(mystr);
         }
+        $('#items').append(
+            `<nav aria-label="breadcrumb">
+                <ol class="breadcrumb mt-3">
+                    <li class="breadcrumb-item active" aria-current="page">Your Cart Total is <b>₹ <span
+                        id="totalPrice"></b>
+                    </span>. Enter your details below and place your order. Thanks for using My Awesome Cart!</li>
+            </ol>
+            </nav >`)
     }
     document.getElementById('cart').innerHTML = sum;
     document.getElementById('totalPrice').innerHTML = totalPrice;
